@@ -5,7 +5,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 
     $nome_categorias = $_POST ['nome_categorias'];
 
-    $sql = "INSERT INTO categorias (nome_categoris) VALUE ('$nome_categorias')";
+    $sql = "INSERT INTO categorias (nome_categorias) VALUE ('$nome_categorias')";
 
     if ($conn -> query($sql) === true){
         echo "Novo registro adicionado!";
@@ -28,8 +28,7 @@ $conn -> close();
     <title>Create</title>
 </head>
 <body>
-    <form method = "POST" action="create.php">
-    <form method="POST" action= "create_usuario.php">
+    <form method="POST" action= "create_categorias.php">
         <label for="nome_categorias"> Categorias:</label>
         <input type="text" name="nome_categorias" required>
         <input type="submit" value="Editar">
