@@ -3,7 +3,7 @@ include 'db.php';
 
 $sql = "SELECT * FROM conteudo 
 INNER JOIN  categorias
-on categorias.id_categorias = notas.fk_categorias 
+on categorias.id_categorias = conteudo.fk_categorias 
 INNER JOIN  usuario
 on usuario.id_usuario= conteudo.fk_usuario";
 
