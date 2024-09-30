@@ -1,5 +1,5 @@
-create database notas_heloize;
-use notas_heloize;
+create database notas;
+use notas;
 
 create table conteudo (
 id_conteudo int not null primary key auto_increment,
