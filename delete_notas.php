@@ -1,14 +1,14 @@
 <?php
 include 'db.php';
-$id_usuario = $_GET['id_usuario'];
+$id_conteudo = $_GET['id_conteudo'];
 
-$sql = "DELETE FROM usuario WHERE id_usuario ='$id_usuario'";
+$sql = "DELETE FROM conteudo WHERE id_conteudo ='$id_conteudo'";
 if($conn -> query($sql) === true){
     echo"Registro excluido";
 }else{
     echo"Erro". $slq ."<br>".$conn -> error;
 }
 $conn ->close();
-header("Location read_usuario.php");
+header("Location read_notas.php");
 exit();
 ?>

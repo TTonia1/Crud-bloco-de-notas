@@ -42,8 +42,8 @@ $result = $conn-> query($sql);
                 <td><?php echo $row['id_usuario']?></td>
                 <td><?php echo $row['nome_usuario']?></td>
                 <td>
-                    <a href= "delete.php?id_diario=<?php echo $row['id_conteudo']?>">Excluir</a>
-                    <a href="update.php?id_diario=<?php echo $row['id_conteudo']?>">Editar</a>
+                    <a href= "delete_notas.php?id_conteudo=<?php echo $row['id_conteudo']?>">Excluir</a>
+                    <a href="update_notas.php?id_conteudo=<?php echo $row['id_conteudo']?>">Editar</a>
                 </td>
             </tr>
         <?php } ?>
