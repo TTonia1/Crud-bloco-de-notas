@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $nome_usuario = $_POST['nome_usuario'];
     $sql = "INSERT INTO usuario (nome_usuario) VALUE ('$nome_usuario')";
     if($conn -> query($sql) === true){
-        echo"Novo registro adiocionado";
+        echo"Novo registro Adicionado";
     }else{
         echo"Erro". $slq ."<br>".$conn -> error;
     }
