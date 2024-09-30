@@ -33,7 +33,7 @@ $conn -> close();
     <form method="POST" action= "create_usuario.php">
         <label for="nome_categorias"> Categorias:</label>
         <input type="text" name="nome_categorias" required>
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Editar">
     </form>
     
     <a href="read.php">Ver notas.</a>
