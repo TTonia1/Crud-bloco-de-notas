@@ -3,10 +3,9 @@ include 'db.php';
 
 if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 
-    $name = $_POST ['name'];
-    $email = $_POST ['email'];
+    $nome_categorias = $_POST ['nome_categorias'];
 
-    $sql = "INSERT INTO user (name, email) VALUE ('$name' , '$email')";
+    $sql = "INSERT INTO categorias (nome_categoris) VALUE ('$nome_categorias')";
 
     if ($conn -> query($sql) === true){
         echo "Novo registro adicionado!";
