@@ -5,9 +5,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $nome_conteudo = $_POST['nome_conteudo'];
     $conteudo_nota = $_POST['conteudo_nota'];
-    $id_usuario = $_POST['id_usuario'];
-    $id_categorias = $_POST['id_categorias'];
-    $sql = "INSERT INTO conteudo (nome_conteudo) VALUE ('$nome_conteudo')";
+    $fk_usuario = $_POST['fk_usuario'];
+    $fk_categorias = $_POST['fk_categorias'];
+    $sql = "INSERT INTO conteudo (nome_conteudo, fk_categorias , fk_usuario)  VALUE ('$nome_conteudo', '$fk_categorias' , '$fk_usuario')";
     if($conn -> query($sql) === true){
         echo"Novo registro Adicionado";
     }else{
@@ -31,10 +31,10 @@ $conn -> close();
         <input type="text" name="nome_conteudo" required>
         <label for="conteudo_nota"> Conteudo:</label>
         <input type="text" name="conteudo_nota" required>
-        <label for="id_usuario"> Id Usuario:</label>
-        <input type="text" name="id_usuario" required>
-        <label for="id_categorias"> Id Categorias:</label>
-        <input type="text" name="id_categorias" required>
+        <label for="fk_usuario"> Id Usuario:</label>
+        <input type="text" name="fk_usuario" required>
+        <label for="fk_categorias"> Id Categorias:</label>
+        <input type="text" name="fk_categorias" required>
         <input type="submit" value="Enviar">
      </form>
 </body>
