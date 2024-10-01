@@ -31,10 +31,10 @@ $conn -> close();
     <form method="POST" action= "create_categorias.php">
         <label for="nome_categorias"> Categorias:</label>
         <input type="text" name="nome_categorias" required>
-        <input type="submit" value="Editar">
+        <input type="submit" value="Adicionar">
     </form>
     
-    <a href="read.php">Ver notas.</a>
+    <a href="read_notas.php">Ver notas.</a>
     
 </body>
 </html>

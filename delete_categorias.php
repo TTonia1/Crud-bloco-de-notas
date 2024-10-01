@@ -9,6 +9,6 @@ if($conn -> query($sql) === true){
     echo"Erro". $slq ."<br>".$conn -> error;
 }
 $conn ->close();
-header("Location read_categorias.php");
+header("Location read_categoria.php");
 exit();
 ?>
