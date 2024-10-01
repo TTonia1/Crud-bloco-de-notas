@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM usuario";
 
 $result = $conn-> query($sql);
 
@@ -28,7 +28,7 @@ $result = $conn-> query($sql);
                 <td><?php echo $row['id_usuario']?></td>
                 <td><?php echo $row['nome_usuario']?></td>
                 <td>
-                    <a href= "delete_usuario.php?id_usuario=<?php echo $row['id_usuario']?>">Excluir</a>
+                    <a href="delete_usuario.php?id_usuario=<?php echo $row['id_usuario']?>">Excluir</a>
                     <a href="update_usuario.php?id_usuario=<?php echo $row['id_usuario']?>">Editar</a>
                 </td>
             </tr>
