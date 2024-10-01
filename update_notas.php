@@ -1,12 +1,12 @@
 <?php
     include 'db.php';
 
-    $id_nota = $_GET['id'];
+    $id_conteudo = $_GET['id_conteudo'];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $conteudo_nota = $_POST['conteudo_nota'];
 
-        $sql = "UPDATE notas SET, conteudo_nota='$conteudo_nota' WHERE id_conteudo=$id_conteudo";
+        $sql = "UPDATE conteudo SET, conteudo_nota='$conteudo_nota' WHERE id_conteudo='$id_conteudo'";
 
         if ($conn->query($sql) === TRUE) {
             echo "Nota atualizada!";
@@ -15,11 +15,11 @@
         }
 
         $conn ->close();
-        header ("Location: read.php");
+        header ("Location: read_notas.php");
         exit();
     }
 
-    $sql = "SELECT * FROM notas WHERE id_conteudo=$id_conteudo";
+    $sql = "SELECT * FROM conteudo WHERE id_conteudo='$id_conteudo'";
     $result = $conn -> query($sql);
     $row = $result -> fetch_assoc();
 ?>
@@ -31,8 +31,8 @@
     <title>Update Aulas</title>
 </head>
 <body>
-    <form method="POST" action="update.php?id=<?php echo $row['id_conteudo'];?>">
-    <br> Escreva aqui <input type="text" name="conteudo_nota" required> <br>
+    <form method="POST" action="update_notas.php?id_conteudo=<?php echo $row['id_conteudo'];?>">
+    <br> Escreva aqui: <input type="text" name="conteudo_nota" required> <br>
         <br> <input type="submit" value="Salvar edição da nota">
     </form>
 </body>
