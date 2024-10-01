@@ -34,6 +34,8 @@
     <form method="POST" action="update_notas.php?id_conteudo=<?php echo $row['id_conteudo'];?>">
     <br> Escreva aqui: <input type="text" name="conteudo_nota" required> <br>
         <br> <input type="submit" value="Salvar edição da nota">
+        <input type="text" name="conteudo_nota" class='input' value="<?php echo $row['conteudo_nota']; ?>" required>
+        <input type="submit"  class='botaozinho' value="Atualizar">
     </form>
 </body>
 </html>
